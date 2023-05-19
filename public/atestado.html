@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Solicitação Atestado</title>
+</head>
+<body onload="checaAtestado()">
+
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">C.M.C</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Unidades</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="atestado.html">Solicitar Atestado</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-sm-2">
+                    <li class="nav-item">
+                        <a class="nav-link" id="loginNav" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="cadastroNav" href="cadastro.html">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <center>
+    <form onsubmit="event.preventDefault()">
+        <label for="nomeCompleto">Nome Completo</label>
+        <br>
+        <input type="text" name="nomeCompleto" id="nomeAtestado" disabled>
+        <br><br>
+        <label for="dataNascimento">Data de Nascimento</label>
+        <br>
+        <input type="date" name="dataNascimento" id="dataAtestado" disabled>
+        <br><br>
+        <label for="cpf">CPF</label>
+        <br>
+        <input type="text" name="cpf" id="cpfAtestado" disabled>
+        <br><br>
+        <label for="motivoSoli">Motivo da Solicitação</label>
+        <br>
+        <input type="text" name="motivoSoli" id="motivoAtestado" required>
+        <br><br>
+        <label for="dataInicioSin">Data de Início dos Sintomas</label>
+        <br>
+        <input type="date" name="dataInicioSin" id="sinInicioAtestado" required>
+        <br><br>
+        <label>Data da Consulta</label>
+        <br>
+        <span id="dataConsulta">
+            <script>
+                var dt = new Date();
+                var options = {
+                    day: 'numeric',
+                    month: 'numeric',
+                    year: 'numeric',
+                    hour: 'numeric',
+                    minute: 'numeric',
+                };
+                var formattedDate = dt.toLocaleString('pt-BR', options);
+                document.getElementById('dataConsulta').innerHTML = formattedDate;
+            </script>
+        </span>
+        <br><br>
+        <label for="dataRetorno">Data de Retorno</label>
+        <br>
+        <input type="text" name="dataRetorno" id="retornoAtestado" value="A ser definida" disabled>
+        <br><br>
+        <label for="">Informações Adicionais</label>
+        <br>
+        <textarea cols="30" rows="10" id="infoAdc"></textarea>
+        <br>
+        <button type="submit" onclick="enviarPedido()">Enviar</button>
+        <br><br>
+    </form>
+</center>
+</body>
+<script src="script.js"></script>
+</html>

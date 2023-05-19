@@ -1,0 +1,66 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Administrador",
+      "email": "admin@email.com",
+      "idade": 100,
+      "cpf": "admin",
+      "senha": "0000"
+    },
+    {
+      "nome": "Usuário de Teste",
+      "idade": 25,
+      "email": "usertestmail@email.com",
+      "cpf": "110580",
+      "senha": "12345",
+      "id": 2
+    },
+    {
+      "nome": "Senai Teste",
+      "email": "senaiteste@email.com",
+      "idade": "50",
+      "cpf": "117",
+      "senha": "senaiteste1",
+      "id": 4
+    },
+    {
+      "nome": "Teste A",
+      "email": "testea@email.com",
+      "idade": "10",
+      "cpf": "teste1",
+      "senha": "123",
+      "id": 6
+    },
+    {
+      "nome": "Senaitester",
+      "email": "senaitest@email.com",
+      "idade": "50",
+      "cpf": "0101",
+      "senha": "123",
+      "id": 7
+    },
+    {
+      "nome": "Bruno",
+      "email": "bruno@email.com",
+      "idade": "30",
+      "cpf": "111",
+      "senha": "0000",
+      "id": 8
+    }
+  ],
+  "pedidos": [
+    {
+      "nomeCompleto": "Senaitester",
+      "dataNascimento": "1973-04-24",
+      "cpf": "0101",
+      "motivoSoli": "Dor de ouvido",
+      "dataInicioSin": "2023-02-02",
+      "dataConsulta": "24/04/2023, 08:59\n        ",
+      "dataRetorno": "A ser definida",
+      "informacoesAdicionais": "Possível infecção, audição prejudicada",
+      "statusPedido": "Em análise",
+      "id": 1
+    }
+  ]
+}
