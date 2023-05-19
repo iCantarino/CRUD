@@ -299,7 +299,7 @@ function enviarPedido() {
         statusPedido: 'Em análise'
     }
 
-    fetch('pedidos/', {
+    fetch('pedidos', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
